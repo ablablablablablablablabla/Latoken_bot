@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 # Инициализация OpenAI API
 client = openai.OpenAI(
-    api_key="sk-YR-q7xRB_TBvs7w196Ir5Zrhh5mG9Gp2OE16XO8aaOJc9U-bZnal2SM-dx8Tj1V8tk2NF4YHqtbWMwQWMGa4Vw"
+    api_key=""
 )
 
 # Списки гифок
@@ -483,7 +483,7 @@ def main():
     try:
         initialize_database()
         context_data = load_and_store_data("context2.txt")  # Загружаем данные один раз при запуске
-        token = "7990991763:AAGWrst_9nnmscCP1GVZjw3A-Nkg_oZ4ItY"
+        token = ""
         app = ApplicationBuilder().token(token).build()
 
         # Сохраняем context_data в bot_data (доступно всем обработчикам)
@@ -507,4 +507,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
